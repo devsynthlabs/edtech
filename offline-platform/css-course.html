@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Course - Offline Learning Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>🎨 CSS Course</h1>
+            <p>Learn Cascading Style Sheets - Master web design and styling</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Back Button -->
+            <button class="btn btn-back" onclick="goToDashboard()">← Back to Dashboard</button>
+
+            <!-- Course Content -->
+            <div class="course-content">
+                <!-- Section 1: What is CSS -->
+                <div class="course-section">
+                    <h2>What is CSS?</h2>
+                    <p>CSS stands for <strong>Cascading Style Sheets</strong>. CSS is used to style and layout web pages and to add effects and animations to make websites more visually appealing and interactive.</p>
+                    <p>While HTML provides the structure and content, CSS controls the presentation. CSS works with HTML to create beautiful, responsive web designs.</p>
+                    <p><strong>The Three Ways to Add CSS:</strong></p>
+                    <ul style="margin: 15px 0; padding-left: 30px;">
+                        <li><strong>Inline CSS:</strong> Added directly to HTML elements</li>
+                        <li><strong>Internal CSS:</strong> Added in &lt;style&gt; tags in the HTML head</li>
+                        <li><strong>External CSS:</strong> Added via external .css files (best practice)</li>
+                    </ul>
+                </div>
+
+                <!-- Section 2: Basic Syntax -->
+                <div class="course-section">
+                    <h2>CSS Syntax</h2>
+                    <p>CSS consists of selectors and declarations. A declaration contains a property and a value.</p>
+                    
+                    <div class="code-block syntax-css">
+                        <code>/* Selector and Property-Value Pairs */
+h1 {
+    color: blue;              /* Property: Value */
+    font-size: 2rem;
+    text-align: center;
+}</code>
+                    </div>
+
+                    <p><strong>Structure Breakdown:</strong></p>
+                    <ul style="margin: 15px 0; padding-left: 30px;">
+                        <li><code>h1</code> - The selector (targets HTML elements)</li>
+                        <li><code>color: blue;</code> - A declaration (property: value)</li>
+                        <li><code>{}</code> - Curly braces contain all declarations</li>
+                    </ul>
+                </div>
+
+                <!-- Section 3: Selectors -->
+                <div class="course-section">
+                    <h2>CSS Selectors</h2>
+                    <p>Selectors are patterns used to select HTML elements to style. Here are the most common types:</p>
+                    
+                    <h3>Element Selector</h3>
+                    <div class="code-block syntax-css">
+                        <code>p {
+    color: red;
+}</code>
+                    </div>
+
+                    <h3>Class Selector</h3>
+                    <div class="code-block syntax-css">
+                        <code>.highlight {
+    background-color: yellow;
+}</code>
+                    </div>
+
+                    <h3>ID Selector</h3>
+                    <div class="code-block syntax-css">
+                        <code>#header {
+    background-color: navy;
+}</code>
+                    </div>
+
+                    <h3>Universal Selector</h3>
+                    <div class="code-block syntax-css">
+                        <code>* {
+    margin: 0;
+    padding: 0;
+}</code>
+                    </div>
+
+                    <h3>Attribute Selector</h3>
+                    <div class="code-block syntax-css">
+                        <code>input[type="text"] {
+    border: 1px solid gray;
+}</code>
+                    </div>
+
+                    <h3>Combinators</h3>
+                    <div class="code-block syntax-css">
+                        <code>/* Descendant selector */
+div p { color: blue; }
+
+/* Child selector */
+div > p { color: red; }
+
+/* Adjacent sibling selector */
+h2 + p { margin-top: 0; }
+
+/* General sibling selector */
+h2 ~ p { color: green; }</code>
+                    </div>
+                </div>
+
+                <!-- Section 4: Colors and Backgrounds -->
+                <div class="course-section">
+                    <h2>Colors and Backgrounds</h2>
+                    <p>CSS provides multiple ways to define colors and backgrounds:</p>
+                    
+                    <h3>Color Properties</h3>
+                    <div class="code-block syntax-css">
+                        <code>/* Text Color */
+h1 { color: red; }
+
+/* Background Color */
+body { background-color: #f0f0f0; }
+
+/* Different Color Formats */
+p {
+    color: red;                /* Color name */
+}
+h2 {
+    color: #FF5733;           /* Hex code */
+}
+h3 {
+    color: rgb(255, 87, 51);  /* RGB */
+}
+h4 {
+    color: rgba(255, 87, 51, 0.5);  /* RGBA with transparency */
+}</code>
+                    </div>
+
+                    <h3>Background Properties</h3>
+                    <div class="code-block syntax-css">
+                        <code>/* Background Image */
+div {
+    background-image: url('image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Gradient Background */
+header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}</code>
+                    </div>
+                </div>
+
+                <!-- Section 5: Text Styling -->
+                <div class="course-section">
+                    <h2>Text Styling</h2>
+                    <p>CSS provides many properties to style text:</p>
+                    
+                    <div class="code-block syntax-css">
+                        <code>p {
+    /* Font Properties */
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+    
+    /* Text Properties */
+    color: #333;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    line-height: 1.6;
+    letter-spacing: 2px;
+}</code>
+                    </div>
+                </div>
+
+                <!-- Section 6: Box Model -->
+                <div class="course-section">
+                    <h2>The Box Model</h2>
+                    <p>Every element in CSS is composed of four layers: Content, Padding, Border, and Margin.</p>
+                    
+                    <div class="code-block syntax-css">
+                        <code>div {
+    /* Content - Inside the element */
+    width: 300px;
+    height: 200px;
+    
+    /* Padding - Space inside the border */
+    padding: 20px;
+    /* Or individual sides */
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    
+    /* Border - Around the padding */
+    border: 2px solid black;
+    
+    /* Margin - Space outside the border */
+    margin: 20px;
+    /* Or individual sides */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}</code>
+                    </div>
+
+                    <p><strong>Box Model Order (Outside to Inside):</strong></p>
+                    <ol style="margin: 15px 0; padding-left: 30px;">
+                        <li>Margin - Transparent space outside</li>
+                        <li>Border - Line around the padding</li>
+                        <li>Padding - Space inside the border</li>
+                        <li>Content - The actual content</li>
+                    </ol>
+                </div>
+
+                <!-- Section 7: Display and Layout -->
+                <div class="course-section">
+                    <h2>Display and Layout</h2>
+                    <p>The <code>display</code> property determines how an element is rendered:</p>
+                    
+                    <div class="code-block syntax-css">
+                        <code>/* Display Types */
+.inline { display: inline; }      /* Flows with text */
+.block { display: block; }        /* Takes full width */
+.inline-block { display: inline-block; }  /* Both inline and block */
+.none { display: none; }          /* Hidden */
+
+/* Flexbox Layout */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}</code>
+                    </div>
+                </div>
+
+                <!-- Section 8: Responsive Design -->
+                <div class="course-section">
+                    <h2>Responsive Design with Media Queries</h2>
+                    <p>Media queries allow you to apply different styles for different screen sizes:</p>
+                    
+                    <div class="code-block syntax-css">
+                        <code>/* Desktop styles */
+.container {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+}</code>
+                    </div>
+                </div>
+
+                <!-- Section 9: Transitions and Animations -->
+                <div class="course-section">
+                    <h2>Transitions and Hover Effects</h2>
+                    <p>Make your website interactive with transitions and hover effects:</p>
+                    
+                    <div class="code-block syntax-css">
+                        <code>/* Smooth Transition */
+button {
+    background-color: blue;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: darkblue;
+    transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animated {
+    animation: slideIn 0.5s ease-in-out;
+}</code>
+                    </div>
+                </div>
+
+                <!-- Section 10: Common Properties -->
+                <div class="course-section">
+                    <h2>Most Common CSS Properties</h2>
+                    <div class="code-block highlight">
+                        <code>width, height - Element dimensions
+background-color - Background color
+color - Text color
+border - Border around element
+margin - Space outside element
+padding - Space inside element
+font-size - Text size
+font-family - Font type
+display - How element is displayed
+position - Element positioning
+z-index - Stacking order
+opacity - Element transparency
+box-shadow - Shadow effect
+border-radius - Rounded corners
+transform - Scale, rotate, skew elements</code>
+                    </div>
+                </div>
+
+                <!-- Quiz Section -->
+                <div style="background: linear-gradient(135deg, #4ecdc4 0%, #44a0b0 100%); color: white; padding: 30px; border-radius: 10px; margin-top: 40px; text-align: center;">
+                    <h2 style="color: white; margin-bottom: 15px;">Test Your Knowledge</h2>
+                    <p style="margin-bottom: 20px;">Take the CSS quiz to test what you've learned!</p>
+                    <button class="btn btn-primary" onclick="goToQuiz('css')">Take CSS Quiz</button>
+                </div>
+
+                <!-- Back Button -->
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="btn btn-back" onclick="goToDashboard()">← Back to Dashboard</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: rgba(0,0,0,0.2); color: white; padding: 20px; text-align: center; margin-top: 50px;">
+        <div class="container">
+            <p>&copy; 2026 Offline Programming Learning Platform</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+</body>
+</html>

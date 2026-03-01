@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Course - Offline Learning Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>📝 HTML Course</h1>
+            <p>Learn HyperText Markup Language - The foundation of web development</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Back Button -->
+            <button class="btn btn-back" onclick="goToDashboard()">← Back to Dashboard</button>
+
+            <!-- Course Content -->
+            <div class="course-content">
+                <!-- Section 1: What is HTML -->
+                <div class="course-section">
+                    <h2>What is HTML?</h2>
+                    <p>HTML stands for <strong>HyperText Markup Language</strong>. It is the standard markup language used to create web pages. HTML provides the structure and content of websites by using a system of tags and elements.</p>
+                    <p>HTML works alongside CSS (for styling) and JavaScript (for interactivity) to create complete web applications.</p>
+                </div>
+
+                <!-- Section 2: Basic Structure -->
+                <div class="course-section">
+                    <h2>HTML Document Structure</h2>
+                    <p>Every HTML document follows a standard structure. Here's a basic template:</p>
+                    
+                    <div class="code-block syntax-html">
+                        <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome&lt;/h1&gt;
+    &lt;p&gt;Content goes here&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+                    </div>
+
+                    <p><strong>Key Components:</strong></p>
+                    <ul style="margin: 15px 0; padding-left: 30px;">
+                        <li><code>&lt;!DOCTYPE html&gt;</code> - Declares this as an HTML5 document</li>
+                        <li><code>&lt;html&gt;</code> - Root element that wraps all content</li>
+                        <li><code>&lt;head&gt;</code> - Contains metadata and links to resources</li>
+                        <li><code>&lt;body&gt;</code> - Contains all visible page content</li>
+                    </ul>
+                </div>
+
+                <!-- Section 3: Headings -->
+                <div class="course-section">
+                    <h2>Headings (h1 - h6)</h2>
+                    <p>Headings are used to create titles and subtitles. HTML provides six levels of headings, from <code>&lt;h1&gt;</code> (most important) to <code>&lt;h6&gt;</code> (least important).</p>
+                    
+                    <div class="code-block syntax-html">
+                        <code>&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Section Title&lt;/h2&gt;
+&lt;h3&gt;Subsection&lt;/h3&gt;
+&lt;h4&gt;Small Heading&lt;/h4&gt;
+&lt;h5&gt;Smaller Heading&lt;/h5&gt;
+&lt;h6&gt;Smallest Heading&lt;/h6&gt;</code>
+                    </div>
+
+                    <p><strong>Best Practices:</strong></p>
+                    <ul style="margin: 15px 0; padding-left: 30px;">
+                        <li>Use only one &lt;h1&gt; per page</li>
+                        <li>Use headings in hierarchical order</li>
+                        <li>Use headings for structure, not styling</li>
+                    </ul>
+                </div>
+
+                <!-- Section 4: Paragraphs -->
+                <div class="course-section">
+                    <h2>Paragraphs (&lt;p&gt;)</h2>
+                    <p>The <code>&lt;p&gt;</code> tag is used to define paragraphs of text. Browsers automatically add space before and after paragraphs.</p>
+                    
+                    <div class="code-block syntax-html">
+                        <code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+&lt;p&gt;Paragraphs are separated by blank lines.&lt;/p&gt;</code>
+                    </div>
+
+                    <p><strong>Other Text Formatting Tags:</strong></p>
+                    <div class="code-block syntax-html">
+                        <code>&lt;strong&gt;Bold text&lt;/strong&gt; - Important text
+&lt;em&gt;Italic text&lt;/em&gt; - Emphasized text
+&lt;u&gt;Underlined text&lt;/u&gt; - Underlined text
+&lt;mark&gt;Highlighted text&lt;/mark&gt; - Marked text
+&lt;small&gt;Small text&lt;/small&gt; - Smaller text
+&lt;code&gt;Inline code&lt;/code&gt; - Computer code</code>
+                    </div>
+                </div>
+
+                <!-- Section 5: Links -->
+                <div class="course-section">
+                    <h2>Links (&lt;a&gt;)</h2>
+                    <p>The <code>&lt;a&gt;</code> tag (anchor) is used to create hyperlinks. The <code>href</code> attribute specifies the URL to navigate to.</p>
+                    
+                    <div class="code-block syntax-html">
+                        <code>&lt;!-- External Link --&gt;
+&lt;a href="https://www.example.com"&gt;Visit Website&lt;/a&gt;
+
+&lt;!-- Internal Link --&gt;
+&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+
+&lt;!-- Link to Email --&gt;
+&lt;a href="mailto:email@example.com"&gt;Send Email&lt;/a&gt;
+
+&lt;!-- Link with Target --&gt;
+&lt;a href="https://www.example.com" target="_blank"&gt;Open in New Tab&lt;/a&gt;</code>
+                    </div>
+
+                    <p><strong>Link Attributes:</strong></p>
+                    <ul style="margin: 15px 0; padding-left: 30px;">
+                        <li><code>href</code> - The URL or file path</li>
+                        <li><code>target="_blank"</code> - Opens in new tab</li>
+                        <li><code>title</code> - Tooltip text on hover</li>
+                    </ul>
+                </div>
+
+                <!-- Section 6: Lists -->
+                <div class="course-section">
+                    <h2>Lists</h2>
+                    <p>HTML provides different types of lists for organizing information:</p>
+                    
+                    <h3>Unordered Lists (&lt;ul&gt;)</h3>
+                    <div class="code-block syntax-html">
+                        <code>&lt;ul&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+    &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ul&gt;</code>
+                    </div>
+
+                    <h3>Ordered Lists (&lt;ol&gt;)</h3>
+                    <div class="code-block syntax-html">
+                        <code>&lt;ol&gt;
+    &lt;li&gt;First step&lt;/li&gt;
+    &lt;li&gt;Second step&lt;/li&gt;
+    &lt;li&gt;Third step&lt;/li&gt;
+&lt;/ol&gt;</code>
+                    </div>
+                </div>
+
+                <!-- Section 7: Images -->
+                <div class="course-section">
+                    <h2>Images (&lt;img&gt;)</h2>
+                    <p>The <code>&lt;img&gt;</code> tag is used to embed images in web pages.</p>
+                    
+                    <div class="code-block syntax-html">
+                        <code>&lt;img src="image.jpg" alt="Description" width="300" height="200"&gt;</code>
+                    </div>
+
+                    <p><strong>Important Attributes:</strong></p>
+                    <ul style="margin: 15px 0; padding-left: 30px;">
+                        <li><code>src</code> - Path to the image file</li>
+                        <li><code>alt</code> - Alternative text if image fails to load</li>
+                        <li><code>width</code> and <code>height</code> - Image dimensions</li>
+                        <li><code>title</code> - Tooltip on hover</li>
+                    </ul>
+                </div>
+
+                <!-- Section 8: Forms -->
+                <div class="course-section">
+                    <h2>Forms (&lt;form&gt;)</h2>
+                    <p>Forms are used to collect user input. They contain various input elements like text fields, buttons, checkboxes, and more.</p>
+                    
+                    <div class="code-block syntax-html">
+                        <code>&lt;form action="/submit" method="POST"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+    
+    &lt;label for="message"&gt;Message:&lt;/label&gt;
+    &lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;
+    
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code>
+                    </div>
+
+                    <p><strong>Input Types:</strong></p>
+                    <ul style="margin: 15px 0; padding-left: 30px;">
+                        <li><code>text</code> - Single-line text input</li>
+                        <li><code>email</code> - Email address input</li>
+                        <li><code>password</code> - Hidden password input</li>
+                        <li><code>number</code> - Numeric input</li>
+                        <li><code>checkbox</code> - Multiple selection</li>
+                        <li><code>radio</code> - Single selection from options</li>
+                        <li><code>submit</code> - Submit button</li>
+                    </ul>
+                </div>
+
+                <!-- Section 9: Semantic HTML -->
+                <div class="course-section">
+                    <h2>Semantic HTML</h2>
+                    <p>Semantic HTML uses tags that describe the meaning of content. This improves accessibility and SEO.</p>
+                    
+                    <div class="code-block syntax-html">
+                        <code>&lt;header&gt;Header content&lt;/header&gt;
+&lt;nav&gt;Navigation menu&lt;/nav&gt;
+&lt;main&gt;Main content&lt;/main&gt;
+&lt;article&gt;Article content&lt;/article&gt;
+&lt;section&gt;Section of content&lt;/section&gt;
+&lt;aside&gt;Sidebar content&lt;/aside&gt;
+&lt;footer&gt;Footer content&lt;/footer&gt;</code>
+                    </div>
+                </div>
+
+                <!-- Quiz Section -->
+                <div style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%); color: white; padding: 30px; border-radius: 10px; margin-top: 40px; text-align: center;">
+                    <h2 style="color: white; margin-bottom: 15px;">Test Your Knowledge</h2>
+                    <p style="margin-bottom: 20px;">Take the HTML quiz to test what you've learned!</p>
+                    <button class="btn btn-primary" onclick="goToQuiz('html')">Take HTML Quiz</button>
+                </div>
+
+                <!-- Back Button -->
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="btn btn-back" onclick="goToDashboard()">← Back to Dashboard</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: rgba(0,0,0,0.2); color: white; padding: 20px; text-align: center; margin-top: 50px;">
+        <div class="container">
+            <p>&copy; 2026 Offline Programming Learning Platform</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+</body>
+</html>

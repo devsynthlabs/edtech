@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline Programming Learning Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>🚀 Offline Programming Learning Platform</h1>
+            <p>Learn programming languages with interactive lessons and quizzes - No internet required!</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 style="color: white; font-size: 2rem; margin-bottom: 10px;">Available Courses</h2>
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">Choose a course to start learning or take a quiz to test your knowledge</p>
+            </div>
+
+            <!-- Courses Grid -->
+            <div class="courses-grid">
+                <!-- HTML Course Card -->
+                <div class="course-card html">
+                    <h3>📝 HTML</h3>
+                    <p>Learn HyperText Markup Language - the foundation of web development. Master semantic elements, forms, and document structure.</p>
+                    <div class="card-buttons">
+                        <button class="btn btn-primary" onclick="goToCourse('html')">Start Learning</button>
+                        <button class="btn btn-secondary" onclick="goToQuiz('html')">Take Quiz</button>
+                    </div>
+                </div>
+
+                <!-- CSS Course Card -->
+                <div class="course-card css">
+                    <h3>🎨 CSS</h3>
+                    <p>Cascading Style Sheets - Learn to style and layout web pages beautifully. Includes selectors, box model, and responsive design.</p>
+                    <div class="card-buttons">
+                        <button class="btn btn-primary" onclick="goToCourse('css')">Start Learning</button>
+                        <button class="btn btn-secondary" onclick="goToQuiz('css')">Take Quiz</button>
+                    </div>
+                </div>
+
+                <!-- JavaScript Course Card -->
+                <div class="course-card javascript">
+                    <h3>⚡ JavaScript</h3>
+                    <p>The programming language of the web. Learn variables, functions, loops, and event handling to make interactive web applications.</p>
+                    <div class="card-buttons">
+                        <button class="btn btn-primary" onclick="goToCourse('javascript')">Start Learning</button>
+                        <button class="btn btn-secondary" onclick="goToQuiz('javascript')">Take Quiz</button>
+                    </div>
+                </div>
+
+                <!-- Python Course Card -->
+                <div class="course-card python">
+                    <h3>🐍 Python</h3>
+                    <p>A beginner-friendly programming language. Learn variables, data types, functions, and control flow to build your programming foundation.</p>
+                    <div class="card-buttons">
+                        <button class="btn btn-primary" onclick="goToCourse('python')">Start Learning</button>
+                        <button class="btn btn-secondary" onclick="goToQuiz('python')">Take Quiz</button>
+                    </div>
+                </div>
+
+                <!-- C Programming Card -->
+                <div class="course-card c">
+                    <h3>⚙️ C Programming</h3>
+                    <p>Learn the fundamentals of C - a powerful and efficient language. Master variables, functions, memory, and system-level programming.</p>
+                    <div class="card-buttons">
+                        <button class="btn btn-primary" onclick="goToCourse('c')">Start Learning</button>
+                        <button class="btn btn-secondary" onclick="goToQuiz('c')">Take Quiz</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compiler Tool -->
+            <div style="background: white; border-radius: 15px; padding: 30px; margin-top: 50px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center;">
+                <h2 style="color: #667eea; margin-bottom: 15px;">🔧 Code Compiler</h2>
+                <p style="color: #666; margin-bottom: 20px;">Write and execute HTML, CSS, and JavaScript code right in your browser!</p>
+                <button class="btn btn-primary" onclick="goToCompiler()" style="font-size: 1.1rem; padding: 15px 40px;">Open Compiler</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: rgba(0,0,0,0.2); color: white; padding: 20px; text-align: center; margin-top: 50px;">
+        <div class="container">
+            <p>&copy; 2026 Offline Programming Learning Platform | Works completely offline | No internet required</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Offline Learning Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>📋 Quiz</h1>
+            <p>Test your knowledge with our interactive quizzes</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Quiz Container -->
+            <div class="quiz-container">
+                <div id="quiz-container">
+                    <!-- Quiz will be rendered here by JavaScript -->
+                    <div style="text-align: center; padding: 40px;">
+                        <p>Loading quiz...</p>
+                    </div>
+                </div>
+
+                <!-- Quiz Buttons -->
+                <div class="quiz-button" id="quiz-buttons">
+                    <button class="btn btn-success" id="submit-btn" onclick="submitQuiz()">Submit Quiz</button>
+                    <button class="btn btn-danger" onclick="goToDashboard()">Back to Dashboard</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: rgba(0,0,0,0.2); color: white; padding: 20px; text-align: center; margin-top: 50px;">
+        <div class="container">
+            <p>&copy; 2026 Offline Programming Learning Platform</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

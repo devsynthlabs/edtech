@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Course - Offline Learning Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>🐍 Python Course</h1>
+            <p>Learn Python - A beginner-friendly and powerful programming language</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Back Button -->
+            <button class="btn btn-back" onclick="goToDashboard()">← Back to Dashboard</button>
+
+            <!-- Course Content -->
+            <div class="course-content">
+                <!-- Section 1: What is Python -->
+                <div class="course-section">
+                    <h2>What is Python?</h2>
+                    <p>Python is a high-level, interpreted programming language known for its simplicity and readability. It's one of the most popular languages for beginners and professionals alike.</p>
+                    <p><strong>Why Python?</strong></p>
+                    <ul style="margin: 15px 0; padding-left: 30px;">
+                        <li>Easy to learn and understand</li>
+                        <li>Large standard library with many built-in functions</li>
+                        <li>Used in web development, data science, AI, and automation</li>
+                        <li>Community support and extensive documentation</li>
+                        <li>Indentation makes code readable</li>
+                    </ul>
+                </div>
+
+                <!-- Section 2: Variables and Data Types -->
+                <div class="course-section">
+                    <h2>Variables and Data Types</h2>
+                    <p>Python uses dynamic typing - you don't need to declare variable types explicitly.</p>
+                    
+                    <div class="code-block syntax-python">
+                        <code># String
+name = "Alice"
+message = 'Hello, World!'
+
+# Integer
+age = 25
+count = -5
+
+# Float (Decimal)
+price = 19.99
+temperature = 36.5
+
+# Boolean
+is_active = True
+is_complete = False
+
+# List (Array)
+colors = ["red", "green", "blue"]
+numbers = [1, 2, 3, 4, 5]
+
+# Tuple (Immutable List)
+coordinates = (10, 20)
+
+# Dictionary (Key-Value pairs)
+person = {
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+}
+
+# Set (Unique values)
+unique_numbers = {1, 2, 3, 4, 5}</code>
+                    </div>
+
+                    <h3>Type Checking</h3>
+                    <div class="code-block syntax-python">
+                        <code>x = 10
+print(type(x))        # &lt;class 'int'&gt;
+
+y = "Hello"
+print(type(y))        # &lt;class 'str'&gt;
+
+z = [1, 2, 3]
+print(type(z))        # &lt;class 'list'&gt;</code>
+                    </div>
+                </div>
+
+                <!-- Section 3: Print Function -->
+                <div class="course-section">
+                    <h2>The Print Function</h2>
+                    <p>The <code>print()</code> function displays output to the console:</p>
+                    
+                    <div class="code-block syntax-python">
+                        <code># Basic print
+print("Hello, World!")
+
+# Print multiple items
+print("Name:", "John", "Age:", 30)
+
+# String concatenation
+name = "Alice"
+print("Welcome, " + name)
+
+# String formatting
+print(f"My name is {name} and I am {25} years old")
+
+# Print with different separators
+print("a", "b", "c", sep="-")  # a-b-c
+
+# Print with newline handling
+print("Line 1", end=" ")
+print("Line 2")  # Line 1 Line 2</code>
+                    </div>
+                </div>
+
+                <!-- Section 4: Input -->
+                <div class="course-section">
+                    <h2>Getting User Input</h2>
+                    <p>The <code>input()</code> function gets user input from the keyboard:</p>
+                    
+                    <div class="code-block syntax-python">
+                        <code># Get string input
+name = input("Enter your name: ")
+print(f"Hello, {name}!")
+
+# Get numeric input
+age = int(input("Enter your age: "))
+print(f"You are {age} years old")
+
+# Get float input
+price = float(input("Enter price: "))
+print(f"Price: ${price}")
+
+# Multiple inputs
+x, y = input("Enter two numbers (space-separated): ").split()
+print(f"x = {x}, y = {y}")</code>
+                    </div>
+                </div>
+
+                <!-- Section 5: Operators -->
+                <div class="course-section">
+                    <h2>Operators</h2>
+                    <p>Python supports various operators for mathematical and logical operations:</p>
+                    
+                    <h3>Arithmetic Operators</h3>
+                    <div class="code-block syntax-python">
+                        <code>a = 10
+b = 3
+
+print(a + b)   # 13 (addition)
+print(a - b)   # 7 (subtraction)
+print(a * b)   # 30 (multiplication)
+print(a / b)   # 3.33... (division)
+print(a // b)  # 3 (floor division)
+print(a % b)   # 1 (modulo)
+print(a ** b)  # 1000 (exponentiation)</code>
+                    </div>
+
+                    <h3>Assignment Operators</h3>
+                    <div class="code-block syntax-python">
+                        <code>x = 10
+x += 5   # x = 15
+x -= 3   # x = 12
+x *= 2   # x = 24
+x /= 4   # x = 6
+x //= 2  # x = 3</code>
+                    </div>
+
+                    <h3>Comparison Operators</h3>
+                    <div class="code-block syntax-python">
+                        <code>a = 5
+b = 10
+
+print(a == b)  # False (equal)
+print(a != b)  # True (not equal)
+print(a < b)   # True (less than)
+print(a > b)   # False (greater than)
+print(a <= b)  # True (less or equal)
+print(a >= b)  # False (greater or equal)</code>
+                    </div>
+
+                    <h3>Logical Operators</h3>
+                    <div class="code-block syntax-python">
+                        <code>x = True
+y = False
+
+print(x and y)  # False
+print(x or y)   # True
+print(not x)    # False</code>
+                    </div>
+                </div>
+
+                <!-- Section 6: Conditionals -->
+                <div class="course-section">
+                    <h2>Conditional Statements</h2>
+                    <p>Control program flow based on conditions:</p>
+                    
+                    <h3>if Statement</h3>
+                    <div class="code-block syntax-python">
+                        <code>age = 18
+
+if age >= 18:
+    print("You are an adult")
+else:
+    print("You are a minor")</code>
+                    </div>
+
+                    <h3>if...elif...else Statement</h3>
+                    <div class="code-block syntax-python">
+                        <code>score = 85
+
+if score >= 90:
+    print("Grade: A")
+elif score >= 80:
+    print("Grade: B")
+elif score >= 70:
+    print("Grade: C")
+else:
+    print("Grade: F")</code>
+                    </div>
+
+                    <h3>Nested if</h3>
+                    <div class="code-block syntax-python">
+                        <code>age = 25
+income = 50000
+
+if age >= 18:
+    if income >= 30000:
+        print("You qualify for the loan")
+    else:
+        print("Income is too low")
+else:
+    print("You must be 18 or older")</code>
+                    </div>
+                </div>
+
+                <!-- Section 7: Loops -->
+                <div class="course-section">
+                    <h2>Loops</h2>
+                    <p>Repeat code blocks efficiently:</p>
+                    
+                    <h3>for Loop</h3>
+                    <div class="code-block syntax-python">
+                        <code># Loop through range
+for i in range(1, 6):
+    print(i)
+
+# Loop through list
+fruits = ["apple", "banana", "orange"]
+for fruit in fruits:
+    print(fruit)
+
+# Loop with index
+for i, fruit in enumerate(fruits):
+    print(f"{i}: {fruit}")</code>
+                    </div>
+
+                    <h3>while Loop</h3>
+                    <div class="code-block syntax-python">
+                        <code>i = 1
+while i <= 5:
+    print(i)
+    i += 1
+
+# Loop with break
+count = 0
+while True:
+    print(count)
+    count += 1
+    if count >= 5:
+        break  # Exit loop</code>
+                    </div>
+
+                    <h3>Loop Control</h3>
+                    <div class="code-block syntax-python">
+                        <code>for i in range(1, 6):
+    if i == 3:
+        continue  # Skip this iteration
+    if i == 5:
+        break     # Exit loop
+    print(i)</code>
+                    </div>
+                </div>
+
+                <!-- Section 8: Functions -->
+                <div class="course-section">
+                    <h2>Functions</h2>
+                    <p>Reusable blocks of code:</p>
+                    
+                    <h3>Function Definition</h3>
+                    <div class="code-block syntax-python">
+                        <code># Basic function
+def greet():
+    print("Hello!")
+
+greet()  # Call the function
+
+# Function with parameters
+def greet_person(name):
+    print(f"Hello, {name}!")
+
+greet_person("Alice")
+
+# Function with return value
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print(result)  # 8</code>
+                    </div>
+
+                    <h3>Function with Default Parameters</h3>
+                    <div class="code-block syntax-python">
+                        <code>def greet(name="Guest"):
+    print(f"Welcome, {name}!")
+
+greet()           # Welcome, Guest!
+greet("Alice")    # Welcome, Alice!</code>
+                    </div>
+
+                    <h3>Multiple Return Values</h3>
+                    <div class="code-block syntax-python">
+                        <code>def get_min_max(numbers):
+    return min(numbers), max(numbers)
+
+minimum, maximum = get_min_max([3, 1, 4, 1, 5])
+print(f"Min: {minimum}, Max: {maximum}")</code>
+                    </div>
+                </div>
+
+                <!-- Section 9: Lists and Dictionaries -->
+                <div class="course-section">
+                    <h2>Lists and Dictionaries</h2>
+                    <p>Important data structures in Python:</p>
+                    
+                    <h3>List Operations</h3>
+                    <div class="code-block syntax-python">
+                        <code>numbers = [1, 2, 3, 4, 5]
+
+# List methods
+numbers.append(6)       # Add to end
+numbers.insert(0, 0)    # Insert at position
+numbers.remove(3)       # Remove value
+popped = numbers.pop()  # Remove and return last
+
+# List slicing
+print(numbers[1:4])     # Elements 1-3
+print(numbers[:3])      # First 3 elements
+print(numbers[2:])      # From element 2 to end
+
+# List comprehension
+squares = [x**2 for x in range(1, 6)]  # [1, 4, 9, 16, 25]</code>
+                    </div>
+
+                    <h3>Dictionary Operations</h3>
+                    <div class="code-block syntax-python">
+                        <code>person = {
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+}
+
+# Access values
+print(person["name"])     # John
+print(person.get("age"))  # 30
+
+# Add/Update
+person["email"] = "john@example.com"
+person["age"] = 31
+
+# Delete
+del person["city"]
+
+# Iterate
+for key, value in person.items():
+    print(f"{key}: {value}")</code>
+                    </div>
+                </div>
+
+                <!-- Section 10: String Methods -->
+                <div class="course-section">
+                    <h2>String Operations</h2>
+                    <p>Working with strings in Python:</p>
+                    
+                    <div class="code-block syntax-python">
+                        <code>text = "Hello, World!"
+
+# String methods
+print(text.upper())           # HELLO, WORLD!
+print(text.lower())           # hello, world!
+print(text.replace("World", "Python"))
+print(text.split(","))        # Split by comma
+print(len(text))              # 13
+
+# String indexing
+print(text[0])                # H
+print(text[-1])               # !
+print(text[0:5])              # Hello
+
+# String formatting
+name = "Alice"
+age = 25
+print(f"My name is {name} and I am {age} years old")
+print("Name: {}, Age: {}".format(name, age))</code>
+                    </div>
+                </div>
+
+                <!-- Quiz Section -->
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 10px; margin-top: 40px; text-align: center;">
+                    <h2 style="color: white; margin-bottom: 15px;">Test Your Knowledge</h2>
+                    <p style="margin-bottom: 20px;">Take the Python quiz to test what you've learned!</p>
+                    <button class="btn btn-primary" onclick="goToQuiz('python')">Take Python Quiz</button>
+                </div>
+
+                <!-- Back Button -->
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="btn btn-back" onclick="goToDashboard()">← Back to Dashboard</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: rgba(0,0,0,0.2); color: white; padding: 20px; text-align: center; margin-top: 50px;">
+        <div class="container">
+            <p>&copy; 2026 Offline Programming Learning Platform</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+</body>
+</html>

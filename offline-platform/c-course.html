@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming Course - Offline Learning Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>⚙️ C Programming Course</h1>
+            <p>Learn C - A powerful and efficient programming language for system programming</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Back Button -->
+            <button class="btn btn-back" onclick="goToDashboard()">← Back to Dashboard</button>
+
+            <!-- Course Content -->
+            <div class="course-content">
+                <!-- Section 1: What is C -->
+                <div class="course-section">
+                    <h2>What is C?</h2>
+                    <p>C is a general-purpose, procedural programming language created in the 1970s. It's one of the most influential programming languages and forms the foundation for many modern languages.</p>
+                    <p><strong>Why Learn C?</strong></p>
+                    <ul style="margin: 15px 0; padding-left: 30px;">
+                        <li>Foundation for understanding computer science concepts</li>
+                        <li>Used in operating systems, embedded systems, and databases</li>
+                        <li>Teaches important programming fundamentals</li>
+                        <li>Efficient and close to hardware operations</li>
+                        <li>Still widely used in industry</li>
+                    </ul>
+                </div>
+
+                <!-- Section 2: Basic Structure -->
+                <div class="course-section">
+                    <h2>C Program Structure</h2>
+                    <p>Every C program follows a basic structure:</p>
+                    
+                    <div class="code-block syntax-c">
+                        <code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}</code>
+                    </div>
+
+                    <p><strong>Key Components:</strong></p>
+                    <ul style="margin: 15px 0; padding-left: 30px;">
+                        <li><code>#include &lt;stdio.h&gt;</code> - Include input/output library</li>
+                        <li><code>int main()</code> - Entry point of program</li>
+                        <li><code>printf()</code> - Print function (output)</li>
+                        <li><code>return 0;</code> - Return success status</li>
+                    </ul>
+
+                    <h3>Common Header Files</h3>
+                    <div class="code-block syntax-c">
+                        <code>#include &lt;stdio.h&gt;    // Input/Output
+#include &lt;stdlib.h&gt;   // Standard library
+#include &lt;string.h&gt;   // String functions
+#include &lt;math.h&gt;     // Math functions
+#include &lt;ctype.h&gt;    // Character functions
+#include &lt;time.h&gt;     // Time functions</code>
+                    </div>
+                </div>
+
+                <!-- Section 3: Variables and Data Types -->
+                <div class="course-section">
+                    <h2>Variables and Data Types</h2>
+                    <p>C requires explicit type declaration for all variables:</p>
+                    
+                    <div class="code-block syntax-c">
+                        <code>#include &lt;stdio.h&gt;
+
+int main() {
+    // Integer types
+    int age = 25;           // Standard integer
+    short x = 10;           // Small integer
+    long population = 7800000000;
+    
+    // Floating point
+    float price = 19.99;
+    double pi = 3.14159;
+    
+    // Character
+    char initial = 'A';
+    
+    // String (array of chars)
+    char name[50] = "John";
+    
+    // Print values
+    printf("Age: %d\n", age);
+    printf("Price: %.2f\n", price);
+    printf("Name: %s\n", name);
+    
+    return 0;
+}</code>
+                    </div>
+
+                    <h3>Data Type Sizes</h3>
+                    <div class="code-block syntax-c">
+                        <code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Size of int: %lu bytes\n", sizeof(int));
+    printf("Size of float: %lu bytes\n", sizeof(float));
+    printf("Size of double: %lu bytes\n", sizeof(double));
+    printf("Size of char: %lu bytes\n", sizeof(char));
+    
+    return 0;
+}</code>
+                    </div>
+                </div>
+
+                <!-- Section 4: Input and Output -->
+                <div class="course-section">
+                    <h2>Input and Output (I/O)</h2>
+                    <p>Essential for communicating with users:</p>
+                    
+                    <h3>printf() - Output</h3>
+                    <div class="code-block syntax-c">
+                        <code>#include &lt;stdio.h&gt;
+
+int main() {
+    int age = 25;
+    float height = 5.9;
+    
+    printf("Simple string\n");
+    printf("Age: %d\n", age);
+    printf("Height: %.1f feet\n", height);
+    printf("Age: %d, Height: %.1f\n", age, height);
+    
+    return 0;
+}
+
+/* Format specifiers:
+   %d - Integer
+   %f - Float (default 6 decimals)
+   %.2f - Float with 2 decimals
+   %s - String
+   %c - Character
+   %x - Hexadecimal
+   %o - Octal */</code>
+                    </div>
+
+                    <h3>scanf() - Input</h3>
+                    <div class="code-block syntax-c">
+                        <code>#include &lt;stdio.h&gt;
+
+int main() {
+    int age;
+    float height;
+    char name[50];
+    
+    printf("Enter your name: ");
+    scanf("%s", name);
+    
+    printf("Enter your age: ");
+    scanf("%d", &age);
+    
+    printf("Enter your height: ");
+    scanf("%f", &height);
+    
+    printf("Name: %s, Age: %d, Height: %.1f\n", name, age, height);
+    
+    return 0;
+}</code>
+                    </div>
+                </div>
+
+                <!-- Section 5: Operators -->
+                <div class="course-section">
+                    <h2>Operators</h2>
+                    <p>C supports various operators for calculations and logic:</p>
+                    
+                    <h3>Arithmetic Operators</h3>
+                    <div class="code-block syntax-c">
+                        <code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 10, b = 3;
+    
+    printf("Addition: %d\n", a + b);      // 13
+    printf("Subtraction: %d\n", a - b);   // 7
+    printf("Multiplication: %d\n", a * b);// 30
+    printf("Division: %d\n", a / b);      // 3
+    printf("Modulo: %d\n", a % b);        // 1
+    
+    return 0;
+}</code>
+                    </div>
+
+                    <h3>Comparison Operators</h3>
+                    <div class="code-block syntax-c">
+                        <code>a == b   // Equal
+a != b   // Not equal
+a > b    // Greater than
+a < b    // Less than
+a >= b   // Greater or equal
+a <= b   // Less or equal</code>
+                    </div>
+
+                    <h3>Logical Operators</h3>
+                    <div class="code-block syntax-c">
+                        <code>a && b   // AND
+a || b   // OR
+!a       // NOT</code>
+                    </div>
+                </div>
+
+                <!-- Section 6: Conditional Statements -->
+                <div class="course-section">
+                    <h2>Conditional Statements</h2>
+                    <p>Make decisions in your code:</p>
+                    
+                    <h3>if...else Statement</h3>
+                    <div class="code-block syntax-c">
+                        <code>#include &lt;stdio.h&gt;
+
+int main() {
+    int age = 18;
+    
+    if (age >= 18) {
+        printf("You are an adult\n");
+    } else {
+        printf("You are a minor\n");
+    }
+    
+    return 0;
+}</code>
+                    </div>
+
+                    <h3>if...else if...else</h3>
+                    <div class="code-block syntax-c">
+                        <code>#include &lt;stdio.h&gt;
+
+int main() {
+    int score = 85;
+    
+    if (score >= 90) {
+        printf("Grade: A\n");
+    } else if (score >= 80) {
+        printf("Grade: B\n");
+    } else if (score >= 70) {
+        printf("Grade: C\n");
+    } else {
+        printf("Grade: F\n");
+    }
+    
+    return 0;
+}</code>
+                    </div>
+
+                    <h3>switch Statement</h3>
+                    <div class="code-block syntax-c">
+                        <code>#include &lt;stdio.h&gt;
+
+int main() {
+    int day = 3;
+    
+    switch (day) {
+        case 1:
+            printf("Monday\n");
+            break;
+        case 2:
+            printf("Tuesday\n");
+            break;
+        case 3:
+            printf("Wednesday\n");
+            break;
+        default:
+            printf("Unknown day\n");
+    }
+    
+    return 0;
+}</code>
+                    </div>
+                </div>
+
+                <!-- Section 7: Loops -->
+                <div class="course-section">
+                    <h2>Loops</h2>
+                    <p>Repeat code blocks efficiently:</p>
+                    
+                    <h3>for Loop</h3>
+                    <div class="code-block syntax-c">
+                        <code>#include &lt;stdio.h&gt;
+
+int main() {
+    // Print numbers 1 to 5
+    for (int i = 1; i <= 5; i++) {
+        printf("%d\n", i);
+    }
+    
+    return 0;
+}</code>
+                    </div>
+
+                    <h3>while Loop</h3>
+                    <div class="code-block syntax-c">
+                        <code>#include &lt;stdio.h&gt;
+
+int main() {
+    int i = 1;
+    
+    while (i <= 5) {
+        printf("%d\n", i);
+        i++;
+    }
+    
+    return 0;
+}</code>
+                    </div>
+
+                    <h3>do...while Loop</h3>
+                    <div class="code-block syntax-c">
+                        <code>#include &lt;stdio.h&gt;
+
+int main() {
+    int i = 1;
+    
+    do {
+        printf("%d\n", i);
+        i++;
+    } while (i <= 5);
+    // Executes at least once
+    
+    return 0;
+}</code>
+                    </div>
+
+                    <h3>Loop Control</h3>
+                    <div class="code-block syntax-c">
+                        <code>for (int i = 1; i <= 10; i++) {
+    if (i == 3) {
+        continue;  // Skip this iteration
+    }
+    if (i == 8) {
+        break;     // Exit loop
+    }
+    printf("%d\n", i);
+}</code>
+                    </div>
+                </div>
+
+                <!-- Section 8: Functions -->
+                <div class="course-section">
+                    <h2>Functions</h2>
+                    <p>Reusable code blocks with specific purposes:</p>
+                    
+                    <h3>Function Definition</h3>
+                    <div class="code-block syntax-c">
+                        <code>#include &lt;stdio.h&gt;
+
+// Function declaration
+int add(int a, int b);
+
+int main() {
+    int result = add(5, 3);
+    printf("Sum: %d\n", result);
+    return 0;
+}
+
+// Function definition
+int add(int a, int b) {
+    return a + b;
+}</code>
+                    </div>
+
+                    <h3>Functions with No Return Value</h3>
+                    <div class="code-block syntax-c">
+                        <code>#include &lt;stdio.h&gt;
+
+void greet(char name[]) {
+    printf("Hello, %s!\n", name);
+}
+
+int main() {
+    greet("Alice");
+    return 0;
+}</code>
+                    </div>
+
+                    <h3>Function Example - Largest Number</h3>
+                    <div class="code-block syntax-c">
+                        <code>#include &lt;stdio.h&gt;
+
+int findMax(int a, int b, int c) {
+    int max = a;
+    if (b > max) max = b;
+    if (c > max) max = c;
+    return max;
+}
+
+int main() {
+    int result = findMax(10, 25, 15);
+    printf("Maximum: %d\n", result);
+    return 0;
+}</code>
+                    </div>
+                </div>
+
+                <!-- Section 9: Arrays -->
+                <div class="course-section">
+                    <h2>Arrays</h2>
+                    <p>Store multiple values in a single variable:</p>
+                    
+                    <h3>Array Basics</h3>
+                    <div class="code-block syntax-c">
+                        <code>#include &lt;stdio.h&gt;
+
+int main() {
+    // Declare and initialize
+    int numbers[5] = {10, 20, 30, 40, 50};
+    
+    // Access elements
+    printf("First element: %d\n", numbers[0]);
+    printf("Third element: %d\n", numbers[2]);
+    
+    // Modify element
+    numbers[1] = 25;
+    
+    // Loop through array
+    for (int i = 0; i < 5; i++) {
+        printf("%d\n", numbers[i]);
+    }
+    
+    return 0;
+}</code>
+                    </div>
+
+                    <h3>String as Character Array</h3>
+                    <div class="code-block syntax-c">
+                        <code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char name[50] = "John";
+    
+    // String functions
+    printf("Length: %lu\n", strlen(name));
+    
+    // String comparison
+    if (strcmp(name, "John") == 0) {
+        printf("Name matches\n");
+    }
+    
+    // String copy
+    char name2[50];
+    strcpy(name2, name);
+    
+    return 0;
+}</code>
+                    </div>
+                </div>
+
+                <!-- Section 10: Pointers -->
+                <div class="course-section">
+                    <h2>Pointers</h2>
+                    <p>A powerful feature to work with memory addresses:</p>
+                    
+                    <div class="code-block syntax-c">
+                        <code>#include &lt;stdio.h&gt;
+
+int main() {
+    int age = 25;
+    int *ptr;        // Declare pointer
+    
+    ptr = &age;      // & gets address of variable
+    
+    printf("Value of age: %d\n", age);
+    printf("Address of age: %p\n", &age);
+    printf("Pointer value: %p\n", ptr);
+    printf("Value via pointer: %d\n", *ptr); // * dereference
+    
+    // Modify through pointer
+    *ptr = 30;
+    printf("New age: %d\n", age);
+    
+    return 0;
+}</code>
+                    </div>
+
+                    <p><strong>Key Concepts:</strong></p>
+                    <ul style="margin: 15px 0; padding-left: 30px;">
+                        <li><code>&</code> (Address operator) - Gets the address of a variable</li>
+                        <li><code>*</code> (Dereference operator) - Gets the value at an address</li>
+                        <li>Pointers store memory addresses</li>
+                        <li>Used for dynamic memory, functions that modify variables, and arrays</li>
+                    </ul>
+                </div>
+
+                <!-- Quiz Section -->
+                <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; padding: 30px; border-radius: 10px; margin-top: 40px; text-align: center;">
+                    <h2 style="color: white; margin-bottom: 15px;">Test Your Knowledge</h2>
+                    <p style="margin-bottom: 20px;">Take the C Programming quiz to test what you've learned!</p>
+                    <button class="btn btn-primary" onclick="goToQuiz('c')">Take C Programming Quiz</button>
+                </div>
+
+                <!-- Back Button -->
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="btn btn-back" onclick="goToDashboard()">← Back to Dashboard</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: rgba(0,0,0,0.2); color: white; padding: 20px; text-align: center; margin-top: 50px;">
+        <div class="container">
+            <p>&copy; 2026 Offline Programming Learning Platform</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+</body>
+</html>
